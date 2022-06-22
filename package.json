@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "expo": "^45.0.0",
-    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
@@ -11,18 +11,16 @@
     "@babel/core": "^7.12.9",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.67.6",
+    "husky": "^8.0.1",
     "typescript": "~4.3.5"
   },
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android",
+    "format": "prettier -w .",
     "ios": "expo start --ios",
+    "lint": "prettier -c .",
+    "start": "expo start",
     "web": "expo start --web"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "prettier -c ."
-    }
   },
   "version": "1.0.0",
   "private": true,

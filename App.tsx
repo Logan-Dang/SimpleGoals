@@ -10,5 +10,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Home } from './pages';
 
 export default function App() {
-  return <Home />;
+  return (
+    <NavigationContainer>
+      <Home />
+    </NavigationContainer>
+  );
 }

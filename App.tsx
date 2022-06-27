@@ -24,9 +24,13 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <ImageBackground source={backgroundImage} resizeMode='cover' />
-      <Text style={styles.title}>{currentTitle}</Text>
-      <Text style={styles.subtitle}>{defaultSub}</Text>
+      <ImageBackground
+        source={backgroundImage}
+        resizeMode='cover'
+        style={styles.background}>
+        <Text style={styles.title}>{currentTitle}</Text>
+        <Text style={styles.subtitle}>{defaultSub}</Text>
+      </ImageBackground>
     </View>
   );
 }
@@ -49,6 +53,7 @@ const styles = StyleSheet.create({
   },
 
   background: {
+    alignItems: 'center',
     width: Dimensions.get('window').width,
     height: '100%',
   },

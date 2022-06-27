@@ -1,8 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  Dimensions,
+} from 'react-native';
 
 export default function App() {
   let currentTitle;
   let defaultSub;
+  let backgroundImage = require('./assets/sunrise.png');
+  let screenWidth = Dimensions.get('window').width;
   if (getTime() >= 6 && getTime() < 12) {
     currentTitle = 'Good Morning!';
     defaultSub = "Let's get started";
@@ -15,6 +24,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
+      <ImageBackground source={backgroundImage} resizeMode='cover' />
       <Text style={styles.title}>{currentTitle}</Text>
       <Text style={styles.subtitle}>{defaultSub}</Text>
     </View>
@@ -36,6 +46,11 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     marginTop: '3%',
+  },
+
+  background: {
+    width: Dimensions.get('window').width,
+    height: '100%',
   },
 });
 

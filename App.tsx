@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    marginTop: '15%',
+    height: '100%',
+    margin: 0,
   },
 
   title: {
@@ -54,8 +55,10 @@ const styles = StyleSheet.create({
 
   background: {
     alignItems: 'center',
-    width: Dimensions.get('window').width,
-    height: '100%',
+    width: Dimensions.get('screen').width,
+    height: Dimensions.get('screen').height,
+    paddingTop: '15%',
+    margin: 0,
   },
 });
 

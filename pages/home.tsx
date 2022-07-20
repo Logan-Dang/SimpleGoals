@@ -28,6 +28,7 @@ export default function Home() {
         style={styles.background}>
         <Text style={styles.title}>{currentTitle}</Text>
         <Text style={styles.subtitle}>{defaultSub}</Text>
+        <Text>Goal 1</Text>
       </ImageBackground>
     </View>
   );

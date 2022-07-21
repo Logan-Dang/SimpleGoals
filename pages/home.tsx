@@ -5,6 +5,9 @@ import {
   ImageBackground,
   Dimensions,
 } from 'react-native';
+
+import { Button } from '../components';
+
 export default function Home() {
   let currentTitle;
   let defaultSub;
@@ -28,6 +31,7 @@ export default function Home() {
         style={styles.background}>
         <Text style={styles.title}>{currentTitle}</Text>
         <Text style={styles.subtitle}>{defaultSub}</Text>
+        <Button />
       </ImageBackground>
     </View>
   );

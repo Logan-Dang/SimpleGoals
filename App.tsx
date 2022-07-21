@@ -8,7 +8,16 @@ import {
 
 import { NavigationContainer } from '@react-navigation/native';
 import { Home } from './pages';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  return <Home />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='Home' component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }

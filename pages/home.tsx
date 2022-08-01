@@ -8,11 +8,10 @@ import {
 
 import { Button } from '../components';
 
-export default function Home() {
+export default function Home({ navigation }) {
   let currentTitle;
   let defaultSub;
   let backgroundImage = require('../assets/sunrise.png');
-  let screenWidth = Dimensions.get('window').width;
   if (getTime() >= 6 && getTime() < 12) {
     currentTitle = 'Good Morning!';
     defaultSub = "Let's get started";
@@ -31,7 +30,7 @@ export default function Home() {
         style={styles.background}>
         <Text style={styles.title}>{currentTitle}</Text>
         <Text style={styles.subtitle}>{defaultSub}</Text>
-        <Button />
+        <Button onPress={() => navigation.navigate('New Goal')} />
       </ImageBackground>
     </View>
   );

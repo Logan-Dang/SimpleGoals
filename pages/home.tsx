@@ -30,7 +30,10 @@ export default function Home({ navigation }) {
         style={styles.background}>
         <Text style={styles.title}>{currentTitle}</Text>
         <Text style={styles.subtitle}>{defaultSub}</Text>
-        <Button onPress={() => navigation.navigate('New Goal')} />
+        <Button
+          title='New Goal'
+          onPress={() => navigation.navigate('New Goal')}
+        />
       </ImageBackground>
     </View>
   );

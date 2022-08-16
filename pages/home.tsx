@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 
 import { Button } from '../components';
+import { db } from '../database';
+import { useState } from 'react';
 
 export default function Home({ navigation }) {
   let currentTitle;
@@ -22,6 +24,22 @@ export default function Home({ navigation }) {
     currentTitle = 'Good Evening!';
     defaultSub = "Let's review your day";
   }
+
+  const [data, setData] = useState<Goal[]>([]);
+
+  interface Goal {
+    id: number;
+    name: string;
+    description: string;
+  }
+
+  db.transaction((tx) => {
+    tx.executeSql('SELECT * FROM Goal', null, (txObj, { rows: { _array } }) => {
+      console.log(_array);
+      setData(_array);
+    });
+  });
+
   return (
     <View style={styles.container}>
       <ImageBackground

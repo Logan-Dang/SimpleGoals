@@ -8,7 +8,8 @@ import {
 
 import { Button } from '../components';
 import { db } from '../database';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { LongTermGoal } from '../database';
 
 export default function Home({ navigation }) {
   let currentTitle;
@@ -25,20 +26,15 @@ export default function Home({ navigation }) {
     defaultSub = "Let's review your day";
   }
 
-  const [data, setData] = useState<Goal[]>([]);
+  const [goals, setGoals] = useState<LongTermGoal[]>([]);
 
-  interface Goal {
-    id: number;
-    name: string;
-    description: string;
-  }
-
-  db.transaction((tx) => {
-    tx.executeSql('SELECT * FROM Goal', null, (txObj, { rows: { _array } }) => {
-      console.log(_array);
-      setData(_array);
+  useEffect(() => {
+    db.transaction((tx) => {
+      tx.executeSql('SELECT * from LongTermGoal', [], (tsx, results) => {
+        setGoals(results.rows._array);
+      });
     });
-  });
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -52,6 +48,8 @@ export default function Home({ navigation }) {
           title='New Goal'
           onPress={() => navigation.navigate('New Goal')}
         />
+        {/* TODO: Get rid of this button, instead the goals should just be displayed here. Probably make a LongTermGoal component. */}
+        <Button title='Log Goals' onPress={() => console.log(goals)} />
       </ImageBackground>
     </View>
   );

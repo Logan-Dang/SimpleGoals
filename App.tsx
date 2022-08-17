@@ -8,6 +8,7 @@ import {
 
 import { NavigationContainer } from '@react-navigation/native';
 import { Home, NewGoal } from './pages';
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();

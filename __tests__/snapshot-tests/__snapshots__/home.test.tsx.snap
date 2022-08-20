@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "height": "100%",
+      "margin": 0,
+    }
+  }
+>
+  <View
+    accessibilityIgnoresInvertColors={true}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 1334,
+        "margin": 0,
+        "paddingTop": "15%",
+        "width": 750,
+      }
+    }
+  >
+    <Image
+      resizeMode="cover"
+      source={1}
+      style={
+        Array [
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "height": 1334,
+            "width": 750,
+          },
+          undefined,
+        ]
+      }
+    />
+    <Text
+      style={
+        Object {
+          "fontSize": 24,
+        }
+      }
+    >
+      Good Afternoon!
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 16,
+          "marginTop": "3%",
+        }
+      }
+    >
+      How was lunch?
+    </Text>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "JustifyContent": "center",
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "borderRadius": 4,
+          "elevation": 3,
+          "paddingHorizontal": 32,
+          "paddingVertical": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "letterSpacing": 0.25,
+            "lineHeight": 21,
+          }
+        }
+      >
+        New Goal
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "JustifyContent": "center",
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "borderRadius": 4,
+          "elevation": 3,
+          "paddingHorizontal": 32,
+          "paddingVertical": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "letterSpacing": 0.25,
+            "lineHeight": 21,
+          }
+        }
+      >
+        Log Goals
+      </Text>
+    </View>
+  </View>
+</View>
+`;

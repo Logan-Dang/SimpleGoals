@@ -1,4 +1,4 @@
-import * as SQLite from 'expo-sqlite';
+import { openDatabase } from 'expo-sqlite';
 
 /** Interface for Long Term Goals */
 export interface LongTermGoal {
@@ -11,7 +11,7 @@ export interface LongTermGoal {
 }
 
 /** expo-sqlite database object */
-const db = SQLite.openDatabase('db.testDb');
+const db = openDatabase('db.testDb');
 
 export function createTables() {
   db.transaction(

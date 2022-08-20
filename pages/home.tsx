@@ -10,8 +10,12 @@ import { Button } from '../components';
 import { db } from '../database';
 import { useEffect, useState } from 'react';
 import { LongTermGoal } from '../database';
+import type { RootStackParamList } from '../types';
+import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-export default function Home({ navigation }) {
+export default function Home({
+  navigation,
+}: NativeStackScreenProps<RootStackParamList, 'Home'>) {
   let currentTitle;
   let defaultSub;
   let backgroundImage = require('../assets/sunrise.png');

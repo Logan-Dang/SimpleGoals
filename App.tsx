@@ -11,8 +11,9 @@ import { Home, NewGoal } from './pages';
 import { createTables } from './database';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useEffect } from 'react';
+import type { RootStackParamList } from './types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   useEffect(() => createTables(), []);

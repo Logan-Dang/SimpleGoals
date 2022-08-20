@@ -7,9 +7,7 @@ import {
   TextStyle,
   TextInputProps,
 } from 'react-native';
-
 import { forwardRef, ReactElement } from 'react';
-
 import { FieldError } from 'react-hook-form';
 
 interface Props extends TextInputProps {

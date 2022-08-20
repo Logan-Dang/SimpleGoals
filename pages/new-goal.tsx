@@ -12,11 +12,7 @@ import {
 } from 'react-native';
 
 import { useState } from 'react';
-
 import { Button, SomeText } from '../components';
-
-import { FieldError } from 'react-hook-form';
-
 import { db } from '../database';
 
 export default function NewGoal() {
@@ -26,18 +22,21 @@ export default function NewGoal() {
   });
 
   function onPress() {
-    console.log('Pressed');
     const { name, description } = form;
 
     db.transaction((tx) => {
       tx.executeSql(
-        'INSERT INTO Goals (name, description) values(?,?)',
+        'INSERT INTO LongTermGoal (name, description) values(?,?)',
         [name, description],
-        (transaction, resultSet) => {
-          console.log('Success');
+        null,
+        (transaction, error) => {
+          console.log(error.message);
+          return true;
         }
       );
     });
+
+    db.transaction(() => {});
     setForm({ name: '', description: '' });
   }
 

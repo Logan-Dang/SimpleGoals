@@ -1,11 +1,30 @@
-import { openDatabase } from 'expo-sqlite';
+import * as SQLite from 'expo-sqlite';
 
-const db = openDatabase('db.testDb'); // returns Database object
+/** Interface for Long Term Goals */
+export interface LongTermGoal {
+  /** db id */
+  id: number;
+  /** Long Term Goal Name */
+  name: string;
+  /** Long Term Goal Description */
+  description: string;
+}
 
-db.transaction((tx) => {
-  tx.executeSql(
-    'CREATE IF NOT EXISTS Goal (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, description TEXT)'
+/** expo-sqlite database object */
+const db = SQLite.openDatabase('db.testDb');
+
+export function createTables() {
+  db.transaction(
+    (tx) => {
+      tx.executeSql(
+        'CREATE TABLE IF NOT EXISTS LongTermGoal (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, description TEXT)',
+        []
+      );
+    },
+    (err) => {
+      console.error(err);
+    },
+    () => console.log('LongTermGoal table success.')
   );
-});
-
+}
 export { db };

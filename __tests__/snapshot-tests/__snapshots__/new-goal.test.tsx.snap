@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "paddingBottom": 0,
+    }
+  }
+>
+  <RCTSafeAreaView
+    accessible={true}
+    emulateUnlessSupported={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Goal Name..."
+      style={
+        Object {
+          "borderRadius": 6,
+          "marginTop": 200,
+        }
+      }
+      value=""
+    />
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Goal Description..."
+      style={
+        Object {
+          "borderRadius": 6,
+          "marginTop": 200,
+        }
+      }
+      value=""
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "JustifyContent": "center",
+          "alignItems": "center",
+          "backgroundColor": "black",
+          "borderRadius": 4,
+          "elevation": 3,
+          "paddingHorizontal": 32,
+          "paddingVertical": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "letterSpacing": 0.25,
+            "lineHeight": 21,
+          }
+        }
+      >
+        Submit
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+</View>
+`;

@@ -1,7 +1,7 @@
 import { create } from 'react-test-renderer';
-import Home from '../../pages/home';
+import { NewGoal } from '../../pages';
 
 it('renders correctly', () => {
-  const tree = create(<Home />).toJSON();
+  const tree = create(<NewGoal />).toJSON();
   expect(tree).toMatchSnapshot();
 });
